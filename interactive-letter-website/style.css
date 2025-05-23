@@ -1,0 +1,129 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Georgia', serif;
+}
+
+/* Artistic background using a gradient */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f06, #f79);
+}
+
+/* Increased Phone frame styling */
+.phone {
+    width: 400px;      /* Increased width */
+    height: 750px;     /* Increased height */
+    background: #000;
+    border-radius: 40px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Screen styling inside the phone */
+.screen {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Lock Screen styling */
+.lock-screen {
+    width: 100%;
+    height: 100%;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+/* Slider styling for unlocking */
+.slider {
+    background: #555;
+    padding: 15px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* App Drawer styling */
+.app-drawer {
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+/* App styling */
+.app {
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.app-icon {
+    font-size: 36px;
+}
+
+/* Chat Screen styling */
+.chat-screen {
+  flex: 1;              /* fill available space */
+  display: flex;
+  flex-direction: column;
+  /* overflow: hidden; */  /* ensure this stays commented/removed */
+}
+
+/* Chat container */
+.chat {
+   flex: 1 1 auto;       /* allow it to grow AND shrink */
+   min-height: 0;        /* let it actually get smaller than its content */
+   padding: 20px;
+   overflow-y: auto;     /* enable scrolling */
+   -webkit-overflow-scrolling: touch;
+   display: flex;
+   flex-direction: column;
+}
+
+
+/* Chat bubble styling */
+.bubble {
+    max-width: 80%;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+/* Messenger-like style for received messages */
+.receiver {
+    background: #0084FF;
+    color: #fff;
+    align-self: flex-end;
+}
+
+/* (Optional) Additional styles can go here */
