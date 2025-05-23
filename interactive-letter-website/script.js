@@ -3,6 +3,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const lockScreen = document.getElementById('lockScreen');
     const appDrawer = document.getElementById('appDrawer');
     const messengerApp = document.getElementById('messengerApp');
+    const contactsApp = document.getElementById('contactsApp');
+    const weatherApp = document.getElementById('weatherApp');
+    const calculatorApp = document.getElementById('calculatorApp');
     const chatScreen = document.getElementById('chatScreen');
     
     // Slide-to-unlock action
@@ -12,10 +15,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // Launch Messenger Chat Screen when Messenger app is clicked
-    messengerApp.addEventListener('click', () => {
-        appDrawer.style.display = 'none';
-        chatScreen.style.display = 'block';
+   messengerApp.addEventListener('click', () => {
+        if (chatScreen.style.display === 'flex') {
+            // Shake the chat screen if it's already open
+            chatScreen.classList.add('shake');
+            setTimeout(() => {
+                chatScreen.classList.remove('shake');
+            }, 500);
+        } else {
+            appDrawer.style.display = 'none';
+            chatScreen.style.display = 'flex';
+        }
     });
+     const showFeedback = () => {
+        // Replace alert with any UI feedback mechanism if needed
+        alert("Only Messenger is allowed. Please press the Messenger app.");
+    };
+
+    // For non-Messenger apps: if chat screen is open, shake it
+
+    const shakeApp = () => {
+        if (chatScreen.style.display === 'flex') {
+            phone.classList.add('shake');
+            setTimeout(() => {
+                phone.classList.remove('shake');
+            }, 500);
+        }
+    };
+
+    contactsApp.addEventListener('click', showFeedback);
+    weatherApp.addEventListener('click', showFeedback);
+    calculatorApp.addEventListener('click', showFeedback);
+    
     
     // Variables for swipe detection
     let startX = 0;
@@ -61,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (translateX > threshold) {
                 chatScreen.style.transform = 'translateX(100%)';
                 setTimeout(() => {
-                    chatScreen.style.display = 'none';
+                    chatScreen.style.display = 'flex';
                     appDrawer.style.display = 'flex';
                     chatScreen.style.transform = 'translateX(0)';
                 }, 300);
@@ -97,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (translateX > threshold) {
             chatScreen.style.transform = 'translateX(100%)';
             setTimeout(() => {
-                chatScreen.style.display = 'none';
+                chatScreen.style.display = 'flex';
                 appDrawer.style.display = 'flex';
                 chatScreen.style.transform = 'translateX(0)';
             }, 300);

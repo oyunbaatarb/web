@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artistic Letter</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
     <div class="phone">
@@ -12,14 +13,72 @@
             <!-- Lock Screen -->
             <div id="lockScreen" class="lock-screen">
                 <div class="slider" id="unlockSlider">
-                    <p>Slide to unlock</p>
+                    <p>Tap to unlock</p>
                 </div>
             </div>
             <!-- App Drawer -->
             <div id="appDrawer" class="app-drawer" style="display: none;">
+               
                 <div class="app" id="messengerApp">
-                    <div class="app-icon">💬</div>
+                    <div class="app-icon">
+                        <i class="fa-solid fa-comment"></i>
+                        <span class="badge">3</span> <!-- Badge to show unread count -->
+                    </div>
                     <p>Messenger</p>
+                </div>
+                <div class="app" id="contactsApp">
+                    <div class="app-icon">
+                        <i class="fa-solid fa-address-book"></i>
+                    </div>
+                    <p>Contacts</p>
+                </div>
+                <div class="app" id="weatherApp">
+                    <div class="app-icon">
+                        <i class="fa-solid fa-cloud-sun"></i>
+                    </div>
+                    <p>Weather</p>
+                </div>
+                <div class="app" id="calculatorApp">
+                    <div class="app-icon">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <p>Calculator</p>
+                </div>
+                <div class="app" id="cameraApp">
+                    <div class="app-icon">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <p>Camera</p>
+                </div>
+                <div class="app" id="galleryApp">
+                    <div class="app-icon">
+                        <i class="fa-solid fa-images"></i>
+                    </div>
+                    <p>Gallery</p>
+                </div>
+                <div class="app" id="settingsApp">
+                    <div class="app-icon">
+                        <i class="fa-solid fa-gear"></i>
+                    </div>
+                    <p>Settings</p>
+                </div>
+                <div class="app" id="calendarApp">
+                    <div class="app-icon">
+                        <i class="fa-solid fa-calendar"></i>
+                    </div>
+                    <p>Calendar</p>
+                </div>
+                <div class="app" id="musicApp">
+                    <div class="app-icon">
+                        <i class="fa-solid fa-music"></i>
+                    </div>
+                    <p>Music</p>
+                </div>
+                <div class="app" id="notesApp">
+                    <div class="app-icon">
+                        <i class="fa-solid fa-sticky-note"></i>
+                    </div>
+                    <p>Notes</p>
                 </div>
                 <!-- Additional apps can be added here -->
             </div>
